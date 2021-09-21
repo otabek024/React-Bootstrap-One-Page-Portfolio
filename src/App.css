@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+/*Navbar Style*/
+:root{
+  --primary-white: #fff;
+  --primary-red: red;
+  --primary-dark: rgba(255, 255, 255, 0)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body{
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo{
+  width: 16.25rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container a{
+  font-weight: 500;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+}
+
+nav ul li {
+  text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: #fff;
+  border-top: 0.1875 solid var(--primary-white);
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a:focus {
+  border-top: 0.1875rem solid red;
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a:hover {
+  border-top: 0.1875rem solid red;
+}
+
+/* Header Style */
+
+.header-wraper{
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://adoption.azureedge.net/wp-content/custom-backgrounds-gallery/user-submitted-background-99.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.main-info{
   display: flex;
+  position: absolute;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.main-info h1{
+  color: var(--primary-white);
+  /* padding-top: 10rem; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
